@@ -13,6 +13,7 @@ def BlackScholesPrice(spot, strike, dmat, retAnnual, volAnnual, typ):
         nd2 = norm.cdf(d2)
         nd1n = norm.cdf(-d1)
         nd2n = norm.cdf(-d2)
+        test = 1
 
         if typ == "CALL" or typ == "Call" or typ == "C" or typ == "c":
             priceBS = spot * nd1 - strike * exp(-retAnnual * (dmat / 252)) * nd2
